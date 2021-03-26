@@ -13,6 +13,10 @@
   }
 }
 
+h1 { 
+  font-size: min(2em, calc(10px + 6vw))
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -34,5 +38,55 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.App button { 
+  font-size: 50px;
+  margin: calc(min(5vw, 5vh)) 5vw
+}
+
+.bust { 
+  margin: calc(min(5vw, 5vh)) 0;
+}
+
+.card { 
+  margin: 20px;
+  width: calc(40px + 10vw);
+}
+
+button {
+  display:inline-block;
+  padding:0.35em 1.2em;
+  border:0.1em solid #FFFFFF;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:#666;
+  text-align:center;
+  transition: all 0.2s;
+}
+button:hover {
+  color:#000000;
+  background-color:#FFFFFF;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .card {
+    margin: 20px -20px;
+  }
+}
+
+@media (max-width: 575px) { 
+  .buttonContainer { 
+    display: flex; 
+    flex-direction: column;
+  }
+  
+  button { 
+    display: block
   }
 }
